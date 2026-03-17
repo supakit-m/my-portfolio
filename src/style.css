@@ -1,0 +1,32 @@
+/* 1. @import ต้องอยู่บนสุดเสมอ */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "tailwindcss";
+/* 2. ตามด้วย @theme */
+@theme {
+  /* Backgrounds */
+  --color-bg-primary: oklch(0.273 0.065 262.4);
+  --color-bg-secondary: oklch(0.7348 0.1365 271.2);
+  --color-bg-tertiary: oklch(0.9046 0.0381 288.89);
+  --color-bg-inverse: oklch(0.9876 0.0085 67.73);
+
+  /* Text Colors */
+  --color-primary: oklch(27.8% 0.033 256.848);
+  --color-secondary: oklch(52.78% 0.00006 271.152);
+  --color-muted: oklch(78.261% 0.00009 271.152);
+  --color-alt: oklch(100% 0.00011 271.152);
+  --color-red: oklch(64.28% 0.21734 25.786);
+
+  /* Brand Colors */
+  --color-brand: oklch(0.912 0.079 209.8);
+  --color-brand-hover: oklch(0.572 0.175 258.6);
+  --color-brand-surface: oklch(40% 0.1 263.085);
+}
+
+/* 3. ส่วนเสริมอื่นๆ ไว้ล่างสุด */
+@layer base {
+  body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-primary);
+  }
+}

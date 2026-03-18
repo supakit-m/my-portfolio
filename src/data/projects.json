@@ -5,8 +5,8 @@
     "description": "โปรเจกต์ทำนายดวงชะตาและวิเคราะห์ทางสถิติ พัฒนาด้วย Vue 3 และ Tailwind CSS เน้น UI ที่ดูทันสมัยและ Interactive สูง",
     "image": "https://placehold.co/600x400/DEDCF8/black?text=Orbit+of+Destiny",
     "tags": ["Vue 3", "Tailwind", "Vite"],
-    "github": "https://github.com/supakit-m/orbit-of-destiny",
-    "demo": "https://supakit-m.github.io/orbit-of-destiny"
+    "github": "https://github.com/supakit-m/lumii",
+    "demo": "https://supakit-m.github.io/lumii/"
   },
   {
     "id": 2,
@@ -14,7 +14,7 @@
     "description": "เว็บไซต์รวบรวมผลงานเวอร์ชันแรก ที่ใช้ในการฝึกฝนพื้นฐานการจัดวาง Layout และการจัดการ State",
     "image": "https://placehold.co/600x400/DEDCF8/black?text=Portfolio+v1",
     "tags": ["HTML", "CSS", "JS"],
-    "github": "https://github.com/supakit-m",
-    "demo": "#"
+    "github": "https://github.com/supakit-m/my-portfolio",
+    "demo": "https://supakit-m.github.io/my-portfolio/"
   }
 ]

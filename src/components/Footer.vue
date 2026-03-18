@@ -8,50 +8,16 @@
     ></div>
 
     <div class="max-w-6xl mx-auto relative z-10">
-      <div class="grid md:grid-cols-3 gap-10 mb-8">
+      <div class="grid md:grid-cols-2 gap-10 mb-8">
         <!-- Left Section - About -->
         <div>
           <h3 class="text-2xl font-bold mb-3">Supakit Mai-ngam</h3>
           <p class="text-alt mb-4 leading-relaxed">
-            Passionate full-stack developer crafting beautiful digital
-            experiences with modern technologies. Always learning, always
-            building.
+            Building the future of the web, one pixel and one line of code at a time. Always building, always evolving.
           </p>
           <div class="flex items-center text-alt">
             <i class="fas fa-map-marker-alt mr-2"></i>
             <span></span>
-          </div>
-        </div>
-
-        <!-- Middle Section - Quick Links -->
-        <div>
-          <h4 class="text-xl font-semibold mb-4 text-alt">Quick Links</h4>
-          <div class="grid grid-cols-2 gap-3">
-            <a
-              href="#"
-              class="text-alt hover:text-brand-hover transition-colors"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="text-alt hover:text-brand-hover transition-colors"
-              >About</a
-            >
-            <a
-              href="#tech-stack"
-              class="text-alt hover:text-brand-hover transition-colors"
-              >Skills</a
-            >
-            <a
-              href="#projects"
-              class="text-alt hover:text-brand-hover transition-colors"
-              >Projects</a
-            >
-            <a
-              href="#contact"
-              class="text-alt hover:text-brand-hover transition-colors"
-              >Contact</a
-            >
           </div>
         </div>
 

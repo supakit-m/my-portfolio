@@ -11,15 +11,18 @@
 
   /* Text Colors */
   --color-primary: oklch(27.8% 0.033 256.848);
-  --color-secondary: oklch(52.78% 0.00006 271.152);
-  --color-muted: oklch(78.261% 0.00009 271.152);
+  --color-secondary: oklch(0.452 0.034 263.2);
+  --color-muted: oklch(0.776 0.000 89.9);
   --color-alt: oklch(100% 0.00011 271.152);
   --color-red: oklch(64.28% 0.21734 25.786);
 
   /* Brand Colors */
-  --color-brand: oklch(0.912 0.079 209.8);
+  /* --color-brand: oklch(0.912 0.079 209.8); */
+  --color-brand: oklch(0.869 0.081 229.0);
   --color-brand-hover: oklch(0.572 0.175 258.6);
   --color-brand-surface: oklch(40% 0.1 263.085);
+
+  --color-hl: oklch(0.818 0.110 142.3)
 }
 
 /* 3. ส่วนเสริมอื่นๆ ไว้ล่างสุด */

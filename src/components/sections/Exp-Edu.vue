@@ -1,10 +1,9 @@
 <template>
   <section id="exp-edu" class="py-20 px-4  mx-auto">
-    <header class="mb-12 text-center md:text-left">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
-        My <span class="text-brand bg-bg-primary rounded-xl px-4">Experiences & Education</span>
+    <header class="">
+      <h2 class="text-4xl font-bold mb-4">
+        My <span class="text-primary">Experiences & Education</span>
       </h2>
-      <div class="h-1.5 w-20 bg-bg-primary rounded-full mx-auto md:mx-0"></div>
     </header>
 
     <div class="grid md:grid-cols-2 gap-8">

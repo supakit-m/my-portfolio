@@ -9,15 +9,13 @@
       </p> -->
     </header>
     <div class="flex flex-col z-10 rounded-3xl bg-bg-primary">
-      <!-- FRONTEND -->
+      <!-- Languages -->
       <div
         class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
       >
         <!-- Label -->
-        <div
-          class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18"
-        >
-          <div class="">FRONTEND</div>
+        <div class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18">
+          <div class="">Languages</div>
         </div>
 
         <!-- Tech Grid -->
@@ -25,6 +23,7 @@
           class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
         >
           <!-- Tech Icons Here -->
+
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
@@ -41,6 +40,37 @@
               class="w-6 h-6"
             /><span class="text-lg">TypeScript</span>
           </div>
+          <div
+            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              class="w-6 h-6"
+            /><span class="text-lg">Python</span>
+          </div>
+          <div
+            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
+          >
+            <img
+              src="https://devicon-website.vercel.app/api/php/original.svg"
+              class="w-6 h-6 scale-140"
+            /><span class="text-lg">PHP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div
+        class="border-3 border-bg-primary bg-brand p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
+      >
+        <div
+          class="w-full md:w-1/5 text-primary text-lg font-bold sticky top-18"
+        >
+          <div class="">Frontend</div>
+        </div>
+        <div
+          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
+        >
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
@@ -78,14 +108,6 @@
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
-            <img
-              src="https://devicon-website.vercel.app/api/php/original.svg"
-              class="w-6 h-6 scale-140"
-            /><span class="text-lg">PHP</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -109,51 +131,16 @@
         </div>
       </div>
 
-      <!-- BACKEND -->
+      <!-- Backend -->
       <div
-        class="border-3 border-bg-primary bg-brand p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-        id="backend"
+        class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
       >
-        <div
-          class="w-full md:w-1/5 text-primary text-lg font-bold sticky top-18"
-        >
-          <div class="">BACKEND</div>
+        <div class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18">
+          <div class="">Backend</div>
         </div>
         <div
           class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
         >
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Python</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
-              class="w-6 h-6 bg-white rounded p-0.5"
-            /><span class="text-lg">Flask</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-              class="w-6 h-6 bg-white rounded p-0.5"
-            /><span class="text-lg">Django</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">FastAPI</span>
-          </div>
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
@@ -166,34 +153,33 @@
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              src="https://icon.icepanel.io/Technology/svg/Nest.js.svg"
               class="w-6 h-6 bg-white rounded p-0.5"
-            /><span class="text-lg">Express.js</span>
+            /><span class="text-lg">NestJS</span>
           </div>
-        </div>
-      </div>
-
-      <!-- DATABASE -->
-      <div
-        class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-        id="database"
-      >
-        <div
-          class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18"
-        >
-          <div class="">DATABASE</div>
-        </div>
-        <div
-          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
-        >
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
               class="w-6 h-6"
-            /><span class="text-lg">MongoDB</span>
+            /><span class="text-lg">FastAPI</span>
           </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div
+        class="border-3 border-bg-primary bg-brand p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
+      >
+        <div
+          class="w-full md:w-1/5 text-primary text-lg font-bold sticky top-18"
+        >
+          <div class="">Database</div>
+        </div>
+        <div
+          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
+        >
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
@@ -210,46 +196,19 @@
               class="w-6 h-6"
             /><span class="text-lg">PostgreSQL</span>
           </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Redis</span>
-          </div>
         </div>
       </div>
 
-      <!-- TOOLS -->
+      <!-- Tools -->
       <div
-        class="border-3 border-bg-primary bg-brand p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-        id="tools"
+        class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
       >
-        <div
-          class="w-full md:w-1/5 text-primary text-lg font-bold sticky top-18"
-        >
-          <div class="">TOOLS</div>
+        <div class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18">
+          <div class="">Tools</div>
         </div>
         <div
           class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
         >
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">AWS</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Docker</span>
-          </div>
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
@@ -262,25 +221,17 @@
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png"
               class="w-6 h-6"
-            /><span class="text-lg">Kubernetes</span>
+            /><span class="text-lg">Postman</span>
           </div>
           <div
             class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
           >
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+              src="https://logo.svgcdn.com/simple-icons/mediapipe-dark.svg"
               class="w-6 h-6"
-            /><span class="text-lg">Jenkins</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Nginx</span>
+            /><span class="text-lg">MediaPipe</span>
           </div>
         </div>
       </div>

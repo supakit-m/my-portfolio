@@ -17,7 +17,7 @@
       </span>
     </h1>
 
-    <div class="max-w-3xl mb-12">
+    <div class="mb-12">
       <div
         class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-6"
       >

@@ -42,7 +42,7 @@
 
       <!-- Social Media Icons -->
       <div
-        class="flex flex-wrap justify-center gap-4 mb-6 py-6 border-t border-muted"
+        class="hidden flex flex-wrap justify-center gap-4 mb-6 py-6 border-t border-muted"
       >
         <a
           href="https://github.com/supakit-m"

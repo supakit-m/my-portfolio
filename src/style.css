@@ -1,16 +1,84 @@
 /* 1. @import ต้องอยู่บนสุดเสมอ */
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@400;700&display=swap");
 @import "tailwindcss";
+
 /* 2. ตามด้วย @theme */
 @theme {
-  /* Backgrounds */
-  --color-bg-primary: oklch(0.273 0.065 262.4);
+  /* --- Fonts --- */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+  --font-chakra: "Chakra Petch", sans-serif;
+
+  /* --- Border Radius --- */
+  --radius-default: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* --- Colors --- --color-outline-variant:#40485d*/
+  --color-outline: #6d758c;
+  --color-outline-variant: #3c475a;
+  --color-inverse-surface: #faf8ff;
+  --color-primary-dim: #00d4ec;
+  --color-on-error-container: #ffa8a3;
+  --color-secondary-container: #3c475a;
+  --color-on-background: #dee5ff;
+  --color-on-primary-container: #004d57;
+  --color-primary-container: #00e3fd;
+  --color-surface-container-highest: #192540;
+  --color-error-container: #9f0519;
+  --color-secondary-fixed-dim: #cad5ed;
+  --color-primary-fixed-dim: #00d4ec;
+  --color-tertiary-fixed-dim: #6cc3eb;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container: #0f1930;
+  --color-on-primary-fixed: #003840;
+  --color-primary-fixed: #00e3fd;
+  --color-inverse-primary: #006976;
+  --color-error-dim: #d7383b;
+  --color-on-primary: #005762;
+  --color-on-secondary: #475266;
+  --color-inverse-on-surface: #4d556b;
+  --color-on-tertiary-fixed: #003041;
+  --color-primary: #81ecff;
+  --color-on-error: #490006;
+  --color-surface-dim: #060e20;
+  --color-on-secondary-fixed: #354053;
+  --color-tertiary-dim: #6cc3eb;
+  --color-background: #060e20;
+  --color-on-primary-fixed-variant: #005762;
+  --color-on-surface: #dee5ff;
+  --color-tertiary-container: #7bd1fa;
+  --color-surface-container-high: #141f38;
+  --color-surface: #060e20;
+  --color-on-tertiary-container: #00465d;
+  --color-on-tertiary-fixed-variant: #004f69;
+  --color-on-secondary-container: #c5d1e8;
+  --color-surface-tint: #81ecff;
+  --color-error: #ff716c;
+  --color-tertiary: #9bddff;
+  --color-on-surface-variant: #a3aac4;
+  --color-secondary-dim: #cad5ed;
+  --color-on-secondary-fixed-variant: #515c70;
+  --color-tertiary-fixed: #7bd1fa;
+  --color-secondary-fixed: #d8e3fb;
+  --color-surface-container-low: #091328;
+  --color-on-tertiary: #004f69;
+  --color-surface-bright: #1f2b49;
+  --color-surface-variant: #192540;
+  --color-secondary: #d8e3fb;
+
+
+   /* Backgrounds */
+
+  --color-bg-primary: #060e20;
   --color-bg-secondary: oklch(0.7348 0.1365 271.2);
   --color-bg-tertiary: oklch(0.9046 0.0381 288.89);
   --color-bg-inverse: oklch(0.9876 0.0085 67.73);
 
   /* Text Colors */
-  --color-primary: oklch(27.8% 0.033 256.848);
+  --color-primary: #dee5ff;
   --color-secondary: oklch(0.452 0.034 263.2);
   --color-muted: oklch(0.776 0.000 89.9);
   --color-alt: oklch(100% 0.00011 271.152);
@@ -18,18 +86,27 @@
 
   /* Brand Colors */
   /* --color-brand: oklch(0.912 0.079 209.8); */
-  --color-brand: oklch(0.869 0.081 229.0);
+  --color-brand: #81ecff;
   --color-brand-hover: oklch(0.572 0.175 258.6);
   --color-brand-surface: oklch(40% 0.1 263.085);
-
-  --color-hl: oklch(0.818 0.110 142.3)
 }
 
-/* 3. ส่วนเสริมอื่นๆ ไว้ล่างสุด */
+/* 3. ส่วนเสริม Base Styles */
 @layer base {
   body {
-    font-family: "Chakra Petch", sans-serif;
-    background-color: var(--color-bg-tertiary);
-    color: var(--color-primary);
+    font-family: var(--font-chakra); /* หรือเลือกตามที่คุณต้องการใช้เป็นหลัก */
+    color: var(--color-on-background);
+    color: #dee5ff;
+    background-color: var(--color-background);
+    background-image: 
+      radial-gradient(circle at 50% 0%, var(--color-surface-container-high) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--color-primary-dim), transparent 90%) 0%, transparent 40%),
+      linear-gradient(to right, color-mix(in srgb, var(--color-outline-variant), transparent 80%) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-outline-variant), transparent 80%) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  }
+  
+  h1, h2, h3 {
+    font-family: var(--font-headline);
   }
 }

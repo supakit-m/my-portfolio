@@ -6,7 +6,7 @@
     <h1
       class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter flex flex-col md:block items-center"
     >
-      <span class="text-brand bg-bg-primary rounded-2xl px-4 py-1 inline-block shadow-2xl">
+      <span class="text-brand  rounded-2xl px-4 py-1 inline-block shadow-2xl">
         Supakit
       </span>
 

@@ -6,11 +6,17 @@ import ExpEdu from "../components/sections/Exp-Edu.vue";
 import Skill from "../components/sections/Skill.vue";
 import Project from "../components/sections/Project.vue";
 import Contact from "../components/sections/Contact.vue";
+import MatrixRain from "../components/MatrixRain.vue";
 </script>
 
 <template>
-  <MainLayout class="">
-    <Intro id="intro" class=" pt-20 pb-6"/>
+  <MainLayout class="relative">
+    <MatrixRain 
+      :fontSize="18" 
+      :speed="3" 
+      class="z-[-100] opacity-15"
+    />
+    <Intro id="intro" class="pt-20 pb-6 "/>
     <Personal id="personal" class="border-t pt-20 pb-6"/>
     <ExpEdu id="exp-edu" class="border-t pt-20 pb-6"/>
     <Skill id="skill" class="border-t pt-20 pb-6" />

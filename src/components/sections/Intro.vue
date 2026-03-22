@@ -6,7 +6,7 @@
     <h1
       class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter flex flex-col md:block items-center"
     >
-      <span class="text-brand  rounded-2xl px-4 py-1 inline-block shadow-2xl">
+      <span class="text-primary rounded-2xl px-4 py-1 inline-block shadow-2xl">
         Supakit
       </span>
 
@@ -19,19 +19,17 @@
 
     <div class="mb-12">
       <div
-        class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-6"
+        class="text-primary-dim flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-6"
       >
-        <p class="text-primary text-2xl md:text-3xl font-medium">
-          Full-stack Developer
-        </p>
-        <span class="hidden md:block text-primary text-3xl">|</span>
-        <span class="block md:hidden  text-primary text-3xl border-t-3 w-30"></span>
-        <p class="text-primary text-2xl md:text-3xl font-medium">
-          Back-end Developer
-        </p>
+        <p class="text-2xl md:text-3xl font-medium">Full-stack Developer</p>
+        <span class="hidden md:block text-3xl">|</span>
+        <span class="block md:hidden text-3xl border-t-3 w-30"></span>
+        <p class="text-2xl md:text-3xl font-medium">Back-end Developer</p>
       </div>
 
-      <p class="text-primary text-lg md:text-xl leading-relaxed italic">
+      <p
+        class="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dim text-lg md:text-xl leading-relaxed italic"
+      >
         "Solving complex problems with precision and building sustainable system
         architectures."
       </p>
@@ -40,16 +38,16 @@
     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
       <button
         @click="scrollToProjects"
-        class="bg-brand text-bg-primary border-2 px-10 py-4 rounded-xl font-bold hover:scale-105  transition-all shadow-lg "
-      >
-        ดูผลงานของผม
+        class="w-full md:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary-container font-label font-bold uppercase tracking-widest hover:brightness-110 transition-all"
+          >
+        View Projects
       </button>
 
       <a
         href="/path-to-your-resume.pdf"
         target="_blank"
-        class="bg-bg-primary text-bg-inverse px-10 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-lg"
-      >
+        class="w-full md:w-auto px-10 py-4 rounded-full border border-outline-variant hover:bg-surface-bright text-on-surface font-label font-bold uppercase tracking-widest transition-all"
+          >
         Resume
       </a>
     </div>

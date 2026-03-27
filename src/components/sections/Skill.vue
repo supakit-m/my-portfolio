@@ -1,240 +1,154 @@
-<!-- TECH STACK SECTION -->
 <template>
-  <div>
-    <header class="mb-3">
-      <h2 class="text-4xl font-bold mb-0">
-        My <span class="text-primary">Skills</span>
-      </h2>
-      <!-- <p class="text-secondary max-w-xl">
-      </p> -->
-    </header>
-    <div class="flex flex-col z-10 rounded-3xl bg-bg-primary">
-      <!-- Languages -->
-      <div
-        class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-      >
-        <!-- Label -->
-        <div class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18">
-          <div class="">Languages</div>
-        </div>
-
-        <!-- Tech Grid -->
-        <div
-          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
-        >
-          <!-- Tech Icons Here -->
-
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">JavaScript</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">TypeScript</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Python</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://devicon-website.vercel.app/api/php/original.svg"
-              class="w-6 h-6 scale-140"
-            /><span class="text-lg">PHP</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Frontend -->
-      <div
-        class="border-3 border-bg-primary bg-brand p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-      >
-        <div
-          class="w-full md:w-1/5 text-primary text-lg font-bold sticky top-18"
-        >
-          <div class="">Frontend</div>
-        </div>
-        <div
-          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
-        >
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://devicon-website.vercel.app/api/vuejs/original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Vue</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-              class="w-6 h-6"
-            />
-            <span class="text-lg">Tailwind CSS</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">HTML</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-              class="w-6 h-6"
-            />
-            <span class="text-lg">CSS</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="100"
-              height="100"
-              viewBox="0 0 48 48"
-              class="w-6 h-6 scale-120"
+    <section class="lg:col-span-1 space-y-8">
+          <div class="flex items-center gap-4 mb-2">
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >rebase_edit</span
             >
-              <path
-                fill="#9575cd"
-                d="M44.86,9.976L25.023,45.448c-0.41,0.732-1.462,0.737-1.878,0.008L2.915,9.979 C2.462,9.185,3.141,8.223,4.041,8.384l19.859,3.55c0.127,0.023,0.256,0.022,0.383-0.001l19.443-3.544 C44.623,8.225,45.305,9.18,44.86,9.976z"
-              ></path>
-              <path
-                fill="#fbc02d"
-                d="M33.574,3.01L19.019,5.862c-0.239,0.047-0.416,0.25-0.431,0.493l-0.895,15.121 c-0.021,0.356,0.306,0.633,0.654,0.552l4.052-0.935c0.379-0.087,0.722,0.246,0.644,0.628l-1.204,5.895 c-0.081,0.397,0.291,0.736,0.679,0.618l2.503-0.76c0.388-0.118,0.761,0.222,0.679,0.62l-1.913,9.26 c-0.12,0.579,0.651,0.895,0.972,0.398l0.215-0.332l11.86-23.669c0.199-0.396-0.144-0.848-0.579-0.764l-4.171,0.805 c-0.392,0.076-0.725-0.289-0.615-0.673l2.722-9.438C34.301,3.299,33.967,2.933,33.574,3.01z"
-              ></path>
-            </svg>
-            <span class="text-lg">Vite</span>
+            <h2
+              class="font-headline font-bold text-3xl tracking-tight text-[#dee5ff]"
+            >
+              My Skills
+            </h2>
           </div>
-        </div>
-      </div>
-
-      <!-- Backend -->
-      <div
-        class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-      >
-        <div class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18">
-          <div class="">Backend</div>
-        </div>
-        <div
-          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
-        >
+          <!-- Skill Category: Languages -->
           <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
+            class="bg-surface-container-high p-8 rounded-xl transition-all duration-300 hover:bg-surface-bright group border-l-4 border-transparent hover:border-primary"
           >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Node.js</span>
+            <h3
+              class="font-label text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6"
+            >
+              Languages
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                JS
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                TS
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                Python
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                PHP
+              </div>
+            </div>
           </div>
+          <!-- Skill Category: Backend -->
           <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
+            class="bg-surface-container-high p-8 rounded-xl transition-all duration-300 hover:bg-surface-bright group border-l-4 border-transparent hover:border-primary"
           >
-            <img
-              src="https://icon.icepanel.io/Technology/svg/Nest.js.svg"
-              class="w-6 h-6 bg-white rounded p-0.5"
-            /><span class="text-lg">NestJS</span>
+            <h3
+              class="font-label text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6"
+            >
+              Backend Architecture
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                Node.js
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                NestJS
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                FastAPI
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                Express
+              </div>
+            </div>
           </div>
+          <!-- Skill Category: Frontend -->
           <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
+            class="bg-surface-container-high p-8 rounded-xl transition-all duration-300 hover:bg-surface-bright group border-l-4 border-transparent hover:border-primary"
           >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">FastAPI</span>
+            <h3
+              class="font-label text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6"
+            >
+              Frontend Interface
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                Vue.js
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                Tailwind CSS
+              </div>
+              <div
+                class="px-4 py-2 bg-surface-container-highest rounded-lg font-label text-sm text-on-surface hover:text-primary transition-colors cursor-default"
+              >
+                Next.js
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Database -->
-      <div
-        class="border-3 border-bg-primary bg-brand p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-      >
-        <div
-          class="w-full md:w-1/5 text-primary text-lg font-bold sticky top-18"
-        >
-          <div class="">Database</div>
-        </div>
-        <div
-          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
-        >
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">MySQL</span>
+          <!-- Skill Category: Database & Tools -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-surface-container-low p-6 rounded-xl border-t border-outline-variant/20"
+            >
+              <h3
+                class="font-label text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-4"
+              >
+                Database
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs text-on-surface font-label opacity-70 hover:opacity-100 transition-opacity"
+                  >MySQL</span
+                >
+                <span
+                  class="text-xs text-on-surface font-label opacity-70 hover:opacity-100 transition-opacity"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="text-xs text-on-surface font-label opacity-70 hover:opacity-100 transition-opacity"
+                  >MongoDB</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-low p-6 rounded-xl border-t border-outline-variant/20"
+            >
+              <h3
+                class="font-label text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-4"
+              >
+                Core Tools
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs text-on-surface font-label opacity-70 hover:opacity-100 transition-opacity"
+                  >Git</span
+                >
+                <span
+                  class="text-xs text-on-surface font-label opacity-70 hover:opacity-100 transition-opacity"
+                  >Postman</span
+                >
+                <span
+                  class="text-xs text-on-surface font-label opacity-70 hover:opacity-100 transition-opacity"
+                  >MediaPipe</span
+                >
+              </div>
+            </div>
           </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools -->
-      <div
-        class="bg-bg-primary p-5 rounded-3xl flex md:flex-row flex-col gap-8 items-start"
-      >
-        <div class="w-full md:w-1/5 text-brand text-lg font-bold sticky top-18">
-          <div class="">Tools</div>
-        </div>
-        <div
-          class="bg-bg-secondary p-4 rounded-2xl w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section"
-        >
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">Git</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png"
-              class="w-6 h-6"
-            /><span class="text-lg">Postman</span>
-          </div>
-          <div
-            class="bg-bg-tertiary p-2 rounded-lg shadow-lg flex items-center gap-2"
-          >
-            <img
-              src="https://logo.svgcdn.com/simple-icons/mediapipe-dark.svg"
-              class="w-6 h-6"
-            /><span class="text-lg">MediaPipe</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </section>
 </template>

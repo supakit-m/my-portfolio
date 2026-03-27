@@ -1,18 +1,18 @@
 <template>
+  <div>
   <section
-    id="intro"
     class="min-h-[80vh] pt-20 pb-10 flex flex-col items-center justify-center text-center px-4"
   >
     <h1
       class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter flex flex-col md:block items-center"
     >
-      <span class="text-primary rounded-2xl px-4 py-1 inline-block shadow-2xl">
+      <span class="text-alt rounded-2xl px-4 py-1 inline-block text-custom-shadow">
         Supakit
       </span>
 
       <!-- <br class="md:hidden border-3" /> -->
 
-      <span class="text-primary px-4 py-1 md:mt-0 inline-block">
+      <span class="text-alt px-4 py-1 md:mt-0 inline-block text-custom-shadow">
         Mai-ngam
       </span>
     </h1>
@@ -52,6 +52,7 @@
       </a>
     </div>
   </section>
+  </div>
 </template>
 
 <script setup>
@@ -69,3 +70,11 @@ const scrollToProjects = () => {
   }
 };
 </script>
+<style>
+.text-custom-shadow {
+  /* โครงสร้าง: x-offset | y-offset | blur-radius | color */
+  text-shadow: 
+    2px 2px 6px #81ecff,        
+    0px 0px 12px #FF3399aa; 
+}
+</style>

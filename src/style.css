@@ -88,6 +88,7 @@
   --color-brand: #81ecff;
   --color-brand-hover: oklch(0.572 0.175 258.6);
   --color-brand-surface: oklch(40% 0.1 263.085);
+  --color-brand-alt: #FF3399;
 
   /*  Matrix  */
   --color-matrix: #81ecff;

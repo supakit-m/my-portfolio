@@ -1,5 +1,108 @@
 <template>
-  <section id="exp-edu" class="py-20 px-4  mx-auto">
+  <section class="lg:col-span-1 space-y-16">
+    <!-- Experience Section -->
+    <div>
+      <div class="flex items-center gap-4 mb-10">
+        <span class="material-symbols-outlined text-primary text-3xl"
+          >terminal</span
+        >
+        <h2
+          class="font-headline font-bold text-3xl tracking-tight text-[#dee5ff]"
+        >
+          Experience
+        </h2>
+      </div>
+      <div
+        class="relative border-l-2 border-surface-container-high ml-4 pl-10 space-y-12"
+      >
+        <!-- Experience Item 1 -->
+        <div class="relative group">
+          <div
+            class="absolute -left-[51px] top-1 w-5 h-5 bg-primary rounded-full shadow-[0_0_15px_#81ecff]"
+          ></div>
+          <div
+            class="flex flex-col md:flex-row md:items-baseline justify-between mb-2"
+          >
+            <h3 class="font-headline font-bold text-xl text-primary">
+              Backend Developer Intern
+            </h3>
+            <span
+              class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest"
+              >2023 — PRESENT</span
+            >
+          </div>
+          <h4
+            class="font-label text-on-surface font-medium mb-4 uppercase tracking-wider"
+          >
+            VML Thailand
+          </h4>
+          <p
+            class="text-on-surface-variant text-sm leading-relaxed mb-4 max-w-xl"
+          >
+            Architecting high-performance API services and microservices
+            architecture. Optimizing database queries and integrating complex
+            third-party workflows for enterprise-scale clients.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="bg-surface-container-highest px-3 py-1 text-[10px] font-label text-primary border-l-2 border-primary"
+              >NESTJS</span
+            >
+            <span
+              class="bg-surface-container-highest px-3 py-1 text-[10px] font-label text-primary border-l-2 border-primary"
+              >FASTAPI</span
+            >
+            <span
+              class="bg-surface-container-highest px-3 py-1 text-[10px] font-label text-primary border-l-2 border-primary"
+              >DOCKER</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Education Section -->
+    <div>
+      <div class="flex items-center gap-4 mb-10">
+        <span class="material-symbols-outlined text-primary text-3xl"
+          >school</span
+        >
+        <h2
+          class="font-headline font-bold text-3xl tracking-tight text-[#dee5ff]"
+        >
+          Education
+        </h2>
+      </div>
+      <div class="relative border-l-2 border-surface-container-high ml-4 pl-10">
+        <div class="relative">
+          <div
+            class="absolute -left-[51px] top-1 w-5 h-5 bg-surface-container-high rounded-full border-2 border-primary"
+          ></div>
+          <div
+            class="flex flex-col md:flex-row md:items-baseline justify-between mb-2"
+          >
+            <h3 class="font-headline font-bold text-xl text-[#dee5ff]">
+              Bachelor of Computer Engineering
+            </h3>
+            <span
+              class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest"
+              >Graduating 2024</span
+            >
+          </div>
+          <h4
+            class="font-label text-on-surface font-medium mb-4 uppercase tracking-wider"
+          >
+            Rajamangala University of Technology
+          </h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">
+            Focused on Software Architecture, Data Structures, and Computer
+            Vision. Developed research project on real-time human pose
+            estimation using MediaPipe and NestJS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section id="exp-edu" class="">
     <header class="">
       <h2 class="text-4xl font-bold mb-4">
         My <span class="text-primary">Experiences & Education</span>
@@ -52,5 +155,5 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </template>

@@ -2,7 +2,7 @@
   <nav
     class="sticky top-0 z-50 bg-bg-primary backdrop-blur-md border-b border-bg-tertiary"
   >
-    <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="container mx-auto px-4 h-20 flex items-center justify-between">
       <router-link
         @click="isMenuOpen = false"
         to="/"
@@ -11,12 +11,12 @@
         SUPAKIT<span class="text-brand">.M</span>
       </router-link>
 
-      <div class="hidden md:flex gap-6 items-center">
+      <div class="hidden md:flex lg:gap-12 gap-4 items-center">
         <template v-for="link in navLinks" :key="link.id">
           <button
             @click="handleNavigation(link.id)"
             :class="[
-              'relative pb-1 transition-all duration-300 text-sm font-medium group hover:text-shadow-md text-shadow-brand',
+              'relative pb-1 transition-all duration-300 text-sm lg:text-md font-medium group hover:text-shadow-md text-shadow-brand',
               activeSection === link.id
                 ? 'text-brand text-shadow-md'
                 : 'text-alt hover:text-brand',
@@ -26,7 +26,7 @@
 
             <div
               :class="[
-                'absolute -bottom-1 left-0 h-[2px] bg-brand transition-all duration-300 ease-out hover:shadow-lg shadow-brand',
+                'absolute -bottom-1 left-0 h-0.5 bg-brand transition-all duration-300 ease-out hover:shadow-lg shadow-brand',
                 activeSection === link.id
                   ? 'w-full opacity-100'
                   : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100',

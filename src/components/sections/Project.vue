@@ -85,7 +85,7 @@
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYYpPJF8xBWv3NXYq4jSBry2cdpt4FQ9hmcwlei4xx28Ghp2-Il9mxsC9dA_ckCKPUY-YvTVtw0yvcwxHyIWvRx5CQ8EIcCgtcDnFbmJ5SlMFVWnjoa7jmuwnVpgsPjdN5X65p3LPHx-2dK_49zK6-qgJvlxehi4R3dzgns6LK7lTK3RRYpST8oWRltMnK01V7Q2m0sWV_FMUi5yHpb0C1_ENEDH8EYhN0kHcW2XVn3MaVX1Frq2bTyITpw1uMS4hoWBrQGHvTgVtS"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"
+              class="absolute inset-0 bg-linear-to-t from-surface-container-high via-transparent to-transparent"
             ></div>
           </div>
           <div class="flex flex-wrap gap-2 mt-8">

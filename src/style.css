@@ -1,4 +1,5 @@
 /* 1. @import ต้องอยู่บนสุดเสมอ */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@400;700&display=swap");
 @import "tailwindcss";
 

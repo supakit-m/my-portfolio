@@ -38,7 +38,7 @@
     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
       <button
         @click="scrollToProjects"
-        class="w-full md:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary-container font-label font-bold uppercase tracking-widest hover:brightness-110 transition-all"
+        class="w-full md:w-auto px-10 py-4 rounded-full bg-linear-to-r from-primary to-primary-dim text-on-primary-container font-label font-bold uppercase tracking-widest hover:brightness-110 transition-all"
           >
         View Projects
       </button>

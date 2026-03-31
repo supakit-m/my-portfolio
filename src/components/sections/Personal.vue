@@ -107,7 +107,7 @@
           class="col-span-4 md:col-span-2 p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 flex items-center gap-8 group hover:bg-surface-container-high transition-all"
         >
           <div
-            class="flex-shrink-0 w-24 h-24 rounded-lg bg-surface-container-highest flex items-center justify-center"
+            class="shrink-0 w-24 h-24 rounded-lg bg-surface-container-highest flex items-center justify-center"
           >
             <span class="material-symbols-outlined text-primary text-4xl"
               >memory</span
@@ -157,6 +157,9 @@
     </section>
   </div>
 </template>
+<script>
+import { CpuChipIcon } from '@heroicons/vue/24/outline'
+</script>
 <style>
 .material-symbols-outlined {
   font-variation-settings:

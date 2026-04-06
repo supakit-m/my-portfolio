@@ -14,7 +14,7 @@ import MatrixRain from "../components/MatrixRain.vue";
     <MatrixRain :fontSize="18" :speed="3" class="z-[-100] opacity-15" />
     <Intro id="intro" class="pt-20 pb-6" />
     <Personal id="personal" class="border-t pt-20 pb-6" />
-    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 border-t pt-20 pb-6">
+    <div id="exp-edu-skill" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 border-t pt-20 pb-6">
       <ExpEdu id="exp-edu" class="pt-0 pb-0" />
       <Skill id="skill" class="pt-0 pb-0" />
     </div>

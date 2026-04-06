@@ -1,6 +1,6 @@
 <!-- Footer -->
 <template>
-  <div class="bg-bg-primary text-alt py-12 px-6 relative overflow-hidden">
+  <div class="bg-bg-primary text-alt py-18 px-6 relative overflow-hidden">
     <!-- PARTICLES BACKGROUND -->
     <div
       id="particles-footer"

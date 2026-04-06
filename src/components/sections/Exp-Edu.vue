@@ -2,15 +2,11 @@
   <section class="lg:col-span-1 space-y-16">
     <!-- Experience Section -->
     <div>
-      <div class="flex items-center gap-4 mb-10">
-        <span class="material-symbols-outlined text-primary text-3xl"
-          >terminal</span
-        >
-        <h2
-          class="font-headline font-bold text-3xl tracking-tight text-[#dee5ff]"
-        >
-          Experience
-        </h2>
+      <div
+        class="flex items-center gap-4 text-5xl font-bold text-primary text-section-shadow tracking-widest mb-8"
+      >
+        <span class="material-symbols-outlined scale-150">terminal</span>
+        <h2>Experience</h2>
       </div>
       <div
         class="relative border-l-2 border-surface-container-high ml-4 pl-10 space-y-12"
@@ -62,15 +58,11 @@
     </div>
     <!-- Education Section -->
     <div>
-      <div class="flex items-center gap-4 mb-10">
-        <span class="material-symbols-outlined text-primary text-3xl"
-          >school</span
-        >
-        <h2
-          class="font-headline font-bold text-3xl tracking-tight text-[#dee5ff]"
-        >
-          Education
-        </h2>
+      <div
+        class="flex items-center gap-4 text-5xl font-bold text-primary text-section-shadow tracking-widest mb-8"
+      >
+        <span class="material-symbols-outlined scale-150">school</span>
+        <h2>Education</h2>
       </div>
       <div class="relative border-l-2 border-surface-container-high ml-4 pl-10">
         <div class="relative">

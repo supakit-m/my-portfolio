@@ -28,7 +28,7 @@
       </div>
 
       <p
-        class="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dim text-lg md:text-xl leading-relaxed italic"
+        class="px-1 text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dim text-lg md:text-xl leading-relaxed italic"
       >
         "Solving complex problems with precision and building sustainable system
         architectures."
@@ -38,7 +38,7 @@
     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
       <button
         @click="scrollToProjects"
-        class="w-full md:w-auto px-10 py-4 rounded-full bg-linear-to-r from-primary to-primary-dim text-on-primary-container font-label font-bold uppercase tracking-widest hover:brightness-110 transition-all"
+        class="cursor-pointer w-full md:w-auto px-10 py-4 rounded-full bg-linear-to-r shadow-primary-dim from-primary to-primary-dim text-on-primary-container font-label font-bold uppercase tracking-widest hover:brightness-140 hover:shadow-md transition-all"
           >
         View Projects
       </button>
@@ -46,7 +46,7 @@
       <a
         href="/path-to-your-resume.pdf"
         target="_blank"
-        class="w-full md:w-auto px-10 py-4 rounded-full border border-outline-variant hover:bg-surface-bright text-on-surface font-label font-bold uppercase tracking-widest transition-all"
+        class="w-full md:w-auto px-10 py-4 rounded-full border-2 border-outline-variant hover:bg-surface-bright text-on-surface font-label font-bold uppercase tracking-widest transition-all"
           >
         Resume
       </a>
@@ -70,11 +70,3 @@ const scrollToProjects = () => {
   }
 };
 </script>
-<style>
-.text-custom-shadow {
-  /* โครงสร้าง: x-offset | y-offset | blur-radius | color */
-  text-shadow: 
-    2px 2px 6px #81ecff,        
-    0px 0px 12px #FF3399aa; 
-}
-</style>

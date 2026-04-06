@@ -1,8 +1,12 @@
 <template>
   <div class="">
     <header class="">
-      <h2 class="text-4xl font-bold mb-4">
-        My <span class="text-primary">Personal</span>
+      <div
+      class="flex items-center gap-4 text-5xl font-bold text-primary text-section-shadow tracking-widest mb-8"
+    >
+    <span class="material-symbols-outlined scale-150">person_heart</span>
+      <h2 class="">
+        Personal
       </h2>
       <!-- <p class="text-secondary max-w-xl my-4">
         I am a Computer Engineering graduate with a passion for transforming
@@ -20,11 +24,12 @@
         My goal is to bridge the gap between advanced technology and daily
         lifestyle through high-quality software.
       </p> -->
+    </div>
     </header>
 
     <!-- Bento Grid Section -->
     <section class="">
-      <div class="bento-grid mx-auto px-8 pt-8">
+      <div class="bento-grid mx-auto ">
         <!-- Large Intro Card -->
         <div
           class="col-span-4 md:col-span-2 row-span-2 p-8 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all"
@@ -109,7 +114,7 @@
           <div
             class="shrink-0 w-24 h-24 rounded-lg bg-surface-container-highest flex items-center justify-center"
           >
-            <span class="material-symbols-outlined text-primary text-4xl"
+            <span class="material-symbols-outlined text-primary text-4xl scale-300"
               >memory</span
             >
           </div>
@@ -123,7 +128,7 @@
             </p>
           </div>
         </div>
-        <!-- Location/Contact Minimalist Card -->
+        <!-- Location/Contact Minimalist Card
         <div
           class="col-span-4 md:col-span-2 p-8 rounded-xl glass-panel flex justify-between items-center group"
         >
@@ -152,7 +157,7 @@
               <span class="material-symbols-outlined text-xl">share</span>
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>

@@ -1,16 +1,15 @@
 <template>
   <div>
     <header class="mb-3">
-      <h2 class="text-4xl font-bold mb-4">
-        My <span class="text-primary">Projects</span>
-      </h2>
-      <p class="text-secondary">
-        รวบรวมโปรเจกต์ที่ผมได้พัฒนาขึ้น
-        ตั้งแต่การทดลองเล่นไปจนถึงแอปพลิเคชันที่ใช้งานได้จริง
-      </p>
+      <div
+      class="flex items-center gap-4 text-5xl font-bold text-primary text-section-shadow tracking-widest mb-8"
+    >
+      <span class="material-symbols-outlined scale-150">assignment</span>
+      <h2>Project</h2>
+    </div>
     </header>
     <!-- Filter Bar -->
-    <div class="flex flex-wrap items-center gap-3 mb-12">
+    <div class="hidden flex-wrap items-center gap-3 mb-12">
       <button
         class="px-5 py-2 rounded-full bg-primary text-on-primary font-label text-sm font-bold transition-all"
       >

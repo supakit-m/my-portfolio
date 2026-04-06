@@ -89,7 +89,7 @@
   --color-brand: #81ecff;
   --color-brand-hover: oklch(0.572 0.175 258.6);
   --color-brand-surface: oklch(40% 0.1 263.085);
-  --color-brand-alt: #FF3399;
+  --color-brand-alt: #ff3399;
 
   /*  Matrix  */
   --color-matrix: #81ecff;
@@ -146,5 +146,23 @@
   h2,
   h3 {
     font-family: var(--font-chakra);
+  }
+  .text-custom-shadow {
+    /* โครงสร้าง: x-offset | y-offset | blur-radius | color */
+    text-shadow:
+      2px 2px 6px var(--color-brand),
+      0px 0px 12px var(--color-brand-alt);
+  }
+  .text-section-shadow {
+    /* โครงสร้าง: x-offset | y-offset | blur-radius | color */
+    text-shadow:
+      0px 2px 4px var(--color-brand),
+      0px -2px 4px var(--color-brand-alt);
+  }
+  .box-section-shadow {
+    /* โครงสร้าง: x-offset | y-offset | blur-radius | color */
+    box-shadow:
+      0px 2px 4px var(--color-brand),
+      0px -2px 4px var(--color-brand-alt);
   }
 }

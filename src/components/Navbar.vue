@@ -17,7 +17,7 @@
             @click="handleNavigation(link.id)"
             :class="[
               'relative pb-1 transition-all duration-300 text-sm lg:text-md font-medium group hover:text-shadow-md text-shadow-brand',
-              activeSection === link.id
+              isActiveDesktopLink(link.id)
                 ? 'text-brand text-shadow-md'
                 : 'text-alt hover:text-brand',
             ]"
@@ -27,14 +27,14 @@
             <div
               :class="[
                 'absolute -bottom-1 left-0 h-0.5 bg-brand transition-all duration-300 ease-out hover:shadow-lg shadow-brand',
-                activeSection === link.id
+                isActiveDesktopLink(link.id)
                   ? 'w-full opacity-100'
                   : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100',
               ]"
             ></div>
 
             <div
-              v-if="activeSection === link.id"
+              v-if="isActiveDesktopLink(link.id)"
               class="absolute inset-0 bg-brand/5 blur-md -z-10 rounded-lg transition-opacity duration-500"
             ></div>
           </button>
@@ -91,12 +91,17 @@
         v-if="isMenuOpen"
         class="md:hidden bg-bg-primary border-b border-bg-tertiary px-6 py-6 flex flex-col gap-5 shadow-xl"
       >
-        <template v-for="link in navLinks" :key="link.id">
+        <template v-for="linkMobile in navLinksMobile" :key="linkMobile.id">
           <button
-            @click="handleNavigation(link.id)"
-            class="text-left text-lg text-alt hover:text-muted transition-colors"
+            @click="handleNavigation(linkMobile.id)"
+            :class="[
+              'text-left text-lg transition-colors',
+              activeSection === linkMobile.id
+                ? 'text-brand'
+                : 'text-alt hover:text-muted',
+            ]"
           >
-            {{ link.name }}
+            {{ linkMobile.name }}
           </button>
         </template>
       </div>
@@ -108,9 +113,11 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const isMenuOpen = ref(false);
-const activeSection = ref(""); // เก็บ ID ของ section ที่กำลัง active
+const activeSection = ref(""); // เก็บ id ของ mobile section ที่ active อยู่
+let ticking = false;
 
-const navLinks = [
+// Mobile: แต่ละ section แยกกัน (ตรงกับ DOM elements จริง)
+const navLinksMobile = [
   { name: "Intro", id: "#intro" },
   { name: "Personal", id: "#personal" },
   { name: "Experiences & Education", id: "#exp-edu" },
@@ -119,52 +126,84 @@ const navLinks = [
   { name: "Contact", id: "#contact" },
 ];
 
-// --- ฟังก์ชันตรวจจับ Scroll (Intersection Observer) ---
-let observer = null;
+// Desktop: บาง link รวมหลาย section เข้าด้วยกัน
+const navLinks = [
+  { name: "Intro", id: "#intro" },
+  { name: "Personal", id: "#personal" },
+  { name: "Experiences & Education \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Skills", id: "#exp-edu-skill" },
+  { name: "Projects", id: "#project" },
+  { name: "Contact", id: "#contact" },
+];
+
+// Map desktop link id → mobile section ids ที่ครอบคลุม
+// ใช้สำหรับเช็คว่า desktop link ควร active หรือไม่
+const desktopSectionMap = {
+  "#intro":         ["#intro"],
+  "#personal":      ["#personal"],
+  "#exp-edu-skill": ["#exp-edu", "#skill"], // link เดียวครอบสอง section
+  "#project":       ["#project"],
+  "#contact":       ["#contact"],
+};
+
+// เช็คว่า desktop link ควร highlight ไหม
+// โดย map กลับไปหา mobile sections ที่มันครอบคลุม
+const isActiveDesktopLink = (linkId) => {
+  const sections = desktopSectionMap[linkId] ?? [linkId];
+  return sections.includes(activeSection.value);
+};
+
+// --- Scroll tracking ---
+// ใช้ mobile sections เป็น source of truth เพราะเป็น DOM elements จริง
+const getActiveSection = () => {
+  const navbarHeight = 80;
+  const scrollY = window.scrollY + navbarHeight + 10; // +10 buffer
+
+  let current = navLinksMobile[0].id;
+
+  navLinksMobile.forEach(({ id }) => {
+    const el = document.querySelector(id);
+    if (el && el.offsetTop <= scrollY) {
+      current = id;
+    }
+  });
+
+  activeSection.value = current;
+};
+
+const onScroll = () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      getActiveSection();
+      ticking = false;
+    });
+    ticking = true;
+  }
+};
+
+// --- Navigation ---
+const handleNavigation = (id) => {
+  isMenuOpen.value = false;
+
+  // รอ menu ปิดก่อนแล้วค่อย scroll (เฉพาะ mobile)
+  setTimeout(() => {
+    // desktop link อย่าง #exp-edu-skill ไม่มี DOM element จริง
+    // ให้ scroll ไปที่ section แรกที่มันครอบคลุมแทน
+    const targetId = desktopSectionMap[id]?.[0] ?? id;
+    const element = document.querySelector(targetId);
+    if (element) {
+      const navbarHeight = 80;
+      const top = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  }, 300);
+};
 
 onMounted(() => {
-  const options = {
-    root: null,
-    rootMargin: "-20% 0px -70% 0px", // ตรวจจับเมื่อ section อยู่บริเวณกลางจอ
-    threshold: 0
-  };
-
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        activeSection.value = `#${entry.target.id}`;
-      }
-    });
-  }, options);
-
-  // สั่งให้ Observer ติดตามทุก Section ที่มี ID ตรงกับ navLinks
-  navLinks.forEach((link) => {
-    const el = document.querySelector(link.id);
-    if (el) observer.observe(el);
-  });
+  getActiveSection();
+  window.addEventListener("scroll", onScroll, { passive: true });
 });
 
 onUnmounted(() => {
-  if (observer) observer.disconnect();
+  window.removeEventListener("scroll", onScroll);
 });
-
-// --- ฟังก์ชันการนำทาง (คงเดิมแต่เพิ่มการเลื่อนที่แม่นยำ) ---
-const handleNavigation = (id) => {
-  isMenuOpen.value = false;
-  const delay = isMenuOpen.value ? 300 : 0;
-
-  setTimeout(() => {
-    const element = document.querySelector(id);
-    if (element) {
-      const navbarHeight = 80; // ปรับให้ตรงกับความสูง Nav จริง
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  }, delay);
-};
 </script>

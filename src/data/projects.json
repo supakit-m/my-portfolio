@@ -1,19 +1,45 @@
 [
   {
     "id": 1,
+    "title": "EntryFlow — Eye of Horus",
+    "subtitle": "Computer Vision · Real-time People Counter",
+    "description": "Real-time multi-person people counter ที่รันบน Browser ทั้งหมด ใช้ TensorFlow.js (COCO-SSD) สำหรับ Person Detection พร้อม Custom Centroid/IOU Tracker และ Virtual Counting Line แบบ Bidirectional IN/OUT — ไม่มี Backend ไม่มีการ Upload ไม่มี Cloud",
+    "icon": "visibility",
+    "featured": true,
+    "tags": ["TensorFlow.js", "COCO-SSD", "Vue 3", "Tailwind", "Vite"],
+    "github": "https://github.com/supakit-m/entryflow-eye_of_horus_series",
+    "demo": "https://supakit-m.github.io/entryflow-eye_of_horus_series/"
+  },
+  {
+    "id": 2,
+    "title": "Souldium",
+    "subtitle": "Party Boardgame Platform",
+    "description": "Party card game platform สำหรับเล่นกับเพื่อน รองรับ Spyfall, Who Am I?, Werewolf พัฒนาด้วย FastAPI (WebSocket) และ Vue 3 — All logic ประมวลผลฝั่ง Server",
+    "icon": "casino",
+    "featured": false,
+    "tags": ["FastAPI", "Python", "Vue 3", "Tailwind", "WebSocket"],
+    "github": "https://github.com/supakit-m/souldium",
+    "demo": "https://souldium.up.railway.app/"
+  },
+  {
+    "id": 3,
     "title": "lumii",
-    "description": "โปรเจกต์ทำนายดวงชะตาและวิเคราะห์ทางสถิติ พัฒนาด้วย Vue 3 และ Tailwind CSS เน้น UI ที่ดูทันสมัยและ Interactive สูง",
-    "image": "https://placehold.co/600x400/DEDCF8/black?text=Orbit+of+Destiny",
+    "subtitle": "MBTI Personality Test",
+    "description": "เว็บแอปทดสอบบุคลิกภาพ MBTI ออกแบบ UI สวยงามทันสมัย พัฒนาด้วย Vue 3 + Tailwind CSS เน้น UX ที่ลื่นไหลและ Interactive สูง",
+    "icon": "psychology",
+    "featured": false,
     "tags": ["Vue 3", "Tailwind", "Vite"],
     "github": "https://github.com/supakit-m/lumii",
     "demo": "https://supakit-m.github.io/lumii/"
   },
   {
-    "id": 2,
-    "title": "Portfolio v1",
-    "description": "เว็บไซต์รวบรวมผลงานเวอร์ชันแรก ที่ใช้ในการฝึกฝนพื้นฐานการจัดวาง Layout และการจัดการ State",
-    "image": "https://placehold.co/600x400/DEDCF8/black?text=Portfolio+v1",
-    "tags": ["HTML", "CSS", "JS"],
+    "id": 4,
+    "title": "Portfolio v2",
+    "subtitle": "This Site",
+    "description": "เว็บไซต์รวบรวมผลงานเวอร์ชันปัจจุบัน Vue 3 + Tailwind CSS v4 ออกแบบตาม Material Design 3 Dark Scheme พร้อม Matrix Rain background",
+    "icon": "web",
+    "featured": false,
+    "tags": ["Vue 3", "Tailwind v4", "Vite", "Vue Router"],
     "github": "https://github.com/supakit-m/my-portfolio",
     "demo": "https://supakit-m.github.io/my-portfolio/"
   }

@@ -82,12 +82,12 @@
               <h2
                 class="font-headline text-2xl md:text-3xl font-bold text-on-surface"
               >
-                081-222-3333
+                086-867-4926
               </h2>
             </div>
             <button
               class="flex items-center justify-center gap-2 px-6 py-3 bg-primary/5 hover:bg-primary/20 border border-primary/20 rounded-lg transition-all duration-300 group/btn"
-              onclick="navigator.clipboard.writeText('081-222-3333')"
+              onclick="navigator.clipboard.writeText('0868674926')"
             >
               <span class="material-symbols-outlined text-sm text-primary"
                 >content_copy</span
@@ -125,19 +125,16 @@
                 >north_east</span
               >
             </a>
+            <!-- LinkedIn — uncomment and update URL when ready
             <a
               class="group/link flex items-center justify-between p-6 bg-surface-container-low rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all"
               href="https://linkedin.com/in/supakit-m"
               target="_blank"
             >
               <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-2xl text-primary"
-                  >hub</span
-                >
+                <span class="material-symbols-outlined text-2xl text-primary">hub</span>
                 <div>
-                  <p
-                    class="font-label text-[9px] text-outline-variant uppercase tracking-widest"
-                  >
+                  <p class="font-label text-[9px] text-outline-variant uppercase tracking-widest">
                     Professional Mesh
                   </p>
                   <p class="font-headline font-bold text-on-surface">
@@ -145,11 +142,9 @@
                   </p>
                 </div>
               </div>
-              <span
-                class="material-symbols-outlined text-primary opacity-0 group-hover/link:opacity-100 transition-opacity"
-                >north_east</span
-              >
+              <span class="material-symbols-outlined text-primary opacity-0 group-hover/link:opacity-100 transition-opacity">north_east</span>
             </a>
+            -->
           </div>
         </div>
       </div>

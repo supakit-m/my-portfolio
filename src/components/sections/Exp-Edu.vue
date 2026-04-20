@@ -20,24 +20,23 @@
             class="flex flex-col md:flex-row md:items-baseline justify-between mb-2"
           >
             <h3 class="font-headline font-bold text-xl text-primary">
-              Backend Developer Intern
+              Web Developer Intern
             </h3>
             <span
               class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest"
-              >2023 — PRESENT</span
+              >Nov 2024 — Apr 2025</span
             >
           </div>
           <h4
             class="font-label text-on-surface font-medium mb-4 uppercase tracking-wider"
           >
-            VML Thailand
+            Mirum / VML Thailand
           </h4>
           <p
             class="text-on-surface-variant text-sm leading-relaxed mb-4 max-w-xl"
           >
-            Architecting high-performance API services and microservices
-            architecture. Optimizing database queries and integrating complex
-            third-party workflows for enterprise-scale clients.
+            ฝึกงานในตำแหน่ง Web Developer ที่ Mirum Department (VML Thailand)
+            รับผิดชอบงานพัฒนาเว็บและ API Services ให้กับลูกค้าระดับ Enterprise
           </p>
           <div class="flex flex-wrap gap-2">
             <span

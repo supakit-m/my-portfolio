@@ -2,13 +2,13 @@
   <nav class="sticky top-0 z-50 bg-bg-primary backdrop-blur-md border-b border-bg-tertiary">
     <div class="container mx-auto px-4 h-20 flex items-center justify-between">
       <!-- Logo -->
-      <router-link
+      <div
         @click="isMenuOpen = false"
         to="/"
         class="text-xl md:text-2xl font-bold tracking-tighter text-primary"
       >
         SUPAKIT<span class="text-brand">.M</span>
-      </router-link>
+      </div>
 
       <!-- Desktop Nav Links -->
       <div class="hidden md:flex lg:gap-12 gap-4 items-center">
@@ -16,7 +16,7 @@
           <button
             @click="handleNavigation(link.id)"
             :class="[
-              'relative pb-1 transition-all duration-300 text-sm lg:text-md font-medium group hover:text-shadow-md text-shadow-brand',
+              'cursor-pointer relative pb-1 transition-all duration-300 text-sm lg:text-md font-medium group hover:text-shadow-md text-shadow-brand',
               isActiveDesktopLink(link.id) ? 'text-brand text-shadow-md' : 'text-alt hover:text-brand',
             ]"
           >
@@ -36,7 +36,7 @@
         <!-- Language Toggle -->
         <button
           @click="toggleLocale"
-          class="flex items-center gap-1 px-3 py-1.5 rounded-full border border-outline-variant/40 hover:border-primary/50 transition-all group"
+          class="flex items-center gap-1 px-3 py-1.5 cursor-pointer rounded-full border border-outline-variant/40 hover:border-primary/50 transition-all group"
           :title="locale === 'en' ? 'Switch to Thai' : 'Switch to English'"
         >
           <span class="font-label text-xs font-bold uppercase tracking-wider transition-colors"
@@ -50,7 +50,7 @@
 
         <!-- Resume Button -->
         <button
-          class="bg-primary-container text-on-primary-container font-label font-bold px-4 md:px-6 py-2 rounded-full text-[10px] md:text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all"
+          class="bg-primary-container text-on-primary-container font-label font-bold cursor-pointer w-30 px-4 md:px-6 py-2 rounded-full text-[10px] md:text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all"
         >
           {{ $t('nav.resume') }}
         </button>

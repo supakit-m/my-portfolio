@@ -28,7 +28,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import projectsData from '../../data/projects.json'
+import projectsData from '../../data/projects/projects.json'
 import ProjectCard from '../ProjectCard.vue'
 import ProjectModal from '../ProjectModal.vue'
 

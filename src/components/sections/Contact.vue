@@ -36,7 +36,7 @@
               </h2>
             </div>
             <button
-              class="flex items-center justify-center gap-2 px-6 py-3 bg-primary/5 hover:bg-primary/20 border border-primary/20 rounded-lg transition-all duration-300"
+              class="cursor-pointer flex items-center justify-center gap-2 px-6 py-3 bg-primary/5 hover:bg-primary/20 border border-primary/20 rounded-lg transition-all duration-300"
               @click="copy('supakit.m.work@gmail.com', 'email')"
             >
               <span class="material-symbols-outlined text-sm text-primary">{{ copied === 'email' ? 'check' : 'content_copy' }}</span>
@@ -55,7 +55,7 @@
               </h2>
             </div>
             <button
-              class="flex items-center justify-center gap-2 px-6 py-3 bg-primary/5 hover:bg-primary/20 border border-primary/20 rounded-lg transition-all duration-300"
+              class="cursor-pointer flex items-center justify-center gap-2 px-6 py-3 bg-primary/5 hover:bg-primary/20 border border-primary/20 rounded-lg transition-all duration-300"
               @click="copy('0868674926', 'phone')"
             >
               <span class="material-symbols-outlined text-sm text-primary">{{ copied === 'phone' ? 'check' : 'content_copy' }}</span>

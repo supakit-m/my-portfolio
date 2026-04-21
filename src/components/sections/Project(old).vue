@@ -1,5 +1,5 @@
 <script setup>
-import projectsData from "../../data/projects.json";
+import projectsData from "../../data/projects/projects.json";
 import { ref } from "vue";
 
 const projects = ref(projectsData);

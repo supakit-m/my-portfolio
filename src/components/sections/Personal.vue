@@ -8,10 +8,10 @@
     </header>
 
     <section>
-      <div class="bento-grid mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-6 auto-rows-[minmax(160px,auto)] mx-auto">
 
         <!-- ① Large Story Card (col-span-2, row-span-2) -->
-        <div class="col-span-4 md:col-span-2 row-span-2 p-8 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all">
+        <div class="md:col-span-3 xl:col-span-3 xl:row-span-2 p-8 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all">
           <div class="space-y-4">
             <span class="material-symbols-outlined text-brand text-3xl">terminal</span>
             <h3 class="font-headline text-2xl font-bold group-hover:text-brand transition-colors">
@@ -44,37 +44,49 @@
         </div>
 
         <!-- ② Info Card (col-span-1) -->
-        <div class="col-span-4 md:col-span-1 p-7 rounded-xl bg-surface-container-high flex flex-col gap-4 group hover:bg-surface-bright transition-all">
-          <!-- Name -->
-          <div>
-            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.name') }}</p>
-            <p class="font-headline font-bold text-on-surface text-lg leading-tight">{{ personal.name[$i18nLocale] }}</p>
-            <p class="font-body text-on-surface-variant text-sm">{{ personal.name[$i18nLocale === 'th' ? 'en' : 'th'] }}</p>
-          </div>
-          <!-- Nickname -->
-          <div>
-            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.nickname') }}</p>
-            <p class="font-body text-on-surface text-sm">{{ personal.nickname[$i18nLocale] }} / {{ personal.nickname[$i18nLocale === 'th' ? 'en' : 'th'] }}</p>
-          </div>
-          <!-- Gender -->
-          <div>
-            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.gender') }}</p>
-            <p class="font-body text-on-surface text-sm">{{ $t('personal.gender') }}</p>
-          </div>
-          <!-- Age -->
-          <div>
-            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.age') }}</p>
-            <p class="font-body text-on-surface text-sm">{{ age }} {{ $t('personal.label.yearsOld') }}</p>
-          </div>
-          <!-- Location -->
-          <div>
-            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.location') }}</p>
-            <p class="font-body text-on-surface text-sm leading-snug">{{ personal.location[$i18nLocale] }}</p>
+        <div class="md:col-span-2 xl:col-span-2 p-7 rounded-xl bg-surface-container-high group hover:bg-surface-bright transition-all">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+
+            <div class="md:col-span-2 border-b border-on-surface/5 pb-2">
+              <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">
+                {{ $t('personal.label.name') }}
+              </p>
+              <p class="font-headline font-bold text-on-surface text-xl leading-tight">
+                {{ personal.name[$i18nLocale] }}
+              </p>
+              <p class="font-body text-on-surface-variant text-sm">
+                {{ personal.name[$i18nLocale === 'th' ? 'en' : 'th'] }}
+              </p>
+            </div>
+          
+            <div class="space-y-5">
+              <div>
+                <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.nickname') }}</p>
+                <p class="font-body text-on-surface text-sm">
+                  {{ personal.nickname[$i18nLocale] }} / {{ personal.nickname[$i18nLocale === 'th' ? 'en' : 'th'] }}
+                </p>
+              </div>
+              <div>
+                <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.gender') }}</p>
+                <p class="font-body text-on-surface text-sm">{{ $t('personal.gender') }}</p>
+              </div>
+            </div>
+          
+            <div class="space-y-5">
+              <div>
+                <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.age') }}</p>
+                <p class="font-body text-on-surface text-sm">{{ age }} {{ $t('personal.label.yearsOld') }}</p>
+              </div>
+              <div>
+                <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.location') }}</p>
+                <p class="font-body text-on-surface text-sm leading-snug">{{ personal.location[$i18nLocale] }}</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- ③ Open for Opportunities Card (col-span-1) -->
-        <div class="col-span-4 md:col-span-1 p-7 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all overflow-hidden relative">
+        <div class="md:col-span-1 xl:col-span-2 p-7 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all overflow-hidden relative">
           <div class="relative z-10 space-y-4">
             <!-- Pulse indicator -->
             <div class="flex items-center gap-3">
@@ -94,7 +106,7 @@
           <!-- CTA button -->
           <button
             @click="scrollToContact"
-            class="mt-6 relative z-10 w-full py-3 rounded-lg bg-brand/10 border border-brand/30 hover:bg-brand/20 text-brand font-label text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2"
+            class="cursor-pointer mt-6 relative z-10 w-full py-3 rounded-lg bg-brand/10 border border-brand/30 hover:bg-brand/20 text-brand font-label text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2"
           >
             <span class="material-symbols-outlined text-sm">alternate_email</span>
             {{ $t('personal.contactBtn') }}
@@ -141,12 +153,6 @@ const scrollToContact = () => {
 </script>
 
 <style>
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(160px, auto);
-  gap: 1.5rem;
-}
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
 }

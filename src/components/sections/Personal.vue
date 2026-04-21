@@ -1,196 +1,153 @@
 <template>
-  <div class="">
-    <header class="">
-      <div
-      class="flex items-center gap-4 text-5xl font-bold text-primary text-section-shadow tracking-widest mb-8"
-    >
-    <span class="material-symbols-outlined scale-150">person_heart</span>
-      <h2 class="">
-        Personal
-      </h2>
-      <!-- <p class="text-secondary max-w-xl my-4">
-        I am a Computer Engineering graduate with a passion for transforming
-        logical structures into practical tools.
-      </p>
-      <p class="text-secondary max-w-xl my-4">
-        My journey started with a fascination for how back-end systems power the
-        user experience.
-      </p>
-      <p class="text-secondary max-w-xl my-4">
-        I specialize in rapid learning and systems architecture, with a focus on
-        creating efficient database management and scalable solutions.
-      </p>
-      <p class="text-secondary max-w-xl my-4">
-        My goal is to bridge the gap between advanced technology and daily
-        lifestyle through high-quality software.
-      </p> -->
-    </div>
+  <div>
+    <header>
+      <div class="flex items-center gap-4 text-5xl font-bold text-primary text-section-shadow tracking-widest mb-8">
+        <span class="material-symbols-outlined scale-150">person_heart</span>
+        <h2>{{ $t('sections.personal') }}</h2>
+      </div>
     </header>
 
-    <!-- Bento Grid Section -->
-    <section class="">
-      <div class="bento-grid mx-auto ">
-        <!-- Large Intro Card -->
-        <div
-          class="col-span-4 md:col-span-2 row-span-2 p-8 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all"
-        >
+    <section>
+      <div class="bento-grid mx-auto">
+
+        <!-- ① Large Story Card (col-span-2, row-span-2) -->
+        <div class="col-span-4 md:col-span-2 row-span-2 p-8 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all">
           <div class="space-y-4">
-            <span class="material-symbols-outlined text-primary text-3xl"
-              >terminal</span
-            >
-            <h3
-              class="font-headline text-3xl font-bold group-hover:text-primary transition-colors"
-            >
-              Digital Architect
+            <span class="material-symbols-outlined text-brand text-3xl">terminal</span>
+            <h3 class="font-headline text-2xl font-bold group-hover:text-brand transition-colors">
+              Full-stack Developer
             </h3>
-            <p class="text-on-surface-variant leading-relaxed">
-              I am a Computer Engineering graduate driven by the challenge of
-              complex backend logic and high-end digital aesthetics. My approach
-              blends technical rigor with a deep understanding of user flow.
+
+            <!-- Story paragraph 1 with highlights -->
+            <p class="text-on-surface-variant leading-relaxed text-sm">
+              <template v-for="(chunk, i) in storyParts" :key="i">
+                <span v-if="chunk.highlight" class="text-brand font-semibold">{{ chunk.text }}</span>
+                <span v-else>{{ chunk.text }}</span>
+              </template>
+            </p>
+
+            <!-- Story paragraph 2 -->
+            <p class="text-on-surface-variant leading-relaxed text-sm">
+              {{ $t('personal.story2') }}
+            </p>
+
+            <!-- Story paragraph 3 -->
+            <p class="text-on-surface-variant leading-relaxed text-sm">
+              {{ $t('personal.story3') }}
             </p>
           </div>
+
+          <!-- Top skill tags -->
           <div class="flex flex-wrap gap-2 mt-6">
-            <span
-              class="px-3 py-1 rounded bg-surface-container-highest border-l-2 border-primary font-label text-xs"
-              >GO</span
-            >
-            <span
-              class="px-3 py-1 rounded bg-surface-container-highest border-l-2 border-primary font-label text-xs"
-              >PYTHON</span
-            >
-            <span
-              class="px-3 py-1 rounded bg-surface-container-highest border-l-2 border-primary font-label text-xs"
-              >TYPESCRIPT</span
-            >
-            <span
-              class="px-3 py-1 rounded bg-surface-container-highest border-l-2 border-primary font-label text-xs"
-              >RUST</span
-            >
+            <TechTag v-for="s in personal.topSkills" :key="s" :label="s" size="sm" />
           </div>
         </div>
-        <!-- Education/GPA Card -->
-        <div
-          class="col-span-4 md:col-span-1 p-8 rounded-xl bg-surface-container-high flex flex-col justify-center items-center text-center group hover:bg-surface-bright transition-all"
-        >
-          <span
-            class="font-label text-xs text-primary uppercase tracking-widest mb-2"
-            >Academic Excellence</span
-          >
-          <div class="font-headline text-6xl font-black text-on-surface">
-            3.45
-          </div>
-          <span
-            class="font-label text-xs text-on-surface-variant mt-2 uppercase"
-            >Cumulative GPA</span
-          >
-        </div>
-        <!-- GitHub Card (Simulated) -->
-        <div
-          class="col-span-4 md:col-span-1 p-8 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all overflow-hidden relative"
-        >
-          <div class="relative z-10">
-            <span class="material-symbols-outlined text-primary text-2xl"
-              >code_blocks</span
-            >
-            <h4
-              class="font-label text-sm font-bold mt-4 uppercase tracking-widest"
-            >
-              Git Metrics
-            </h4>
-            <div class="mt-4 font-headline text-2xl font-bold">1.2k+</div>
-            <p class="font-label text-[10px] text-on-surface-variant uppercase">
-              Commits in 2024
-            </p>
-          </div>
-          <!-- Abstract visual element -->
-          <div class="absolute -right-4 -bottom-4 opacity-10">
-            <span class="material-symbols-outlined text-9xl">hub</span>
-          </div>
-        </div>
-        <!-- Engineering Focus Card -->
-        <div
-          class="col-span-4 md:col-span-2 p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 flex items-center gap-8 group hover:bg-surface-container-high transition-all"
-        >
-          <div
-            class="shrink-0 w-24 h-24 rounded-lg bg-surface-container-highest flex items-center justify-center"
-          >
-            <span class="material-symbols-outlined text-primary text-4xl scale-300"
-              >memory</span
-            >
-          </div>
+
+        <!-- ② Info Card (col-span-1) -->
+        <div class="col-span-4 md:col-span-1 p-7 rounded-xl bg-surface-container-high flex flex-col gap-4 group hover:bg-surface-bright transition-all">
+          <!-- Name -->
           <div>
-            <h4 class="font-headline text-xl font-bold">
-              Computer Engineering
-            </h4>
-            <p class="text-on-surface-variant text-sm mt-1">
-              Specializing in distributed systems and low-latency API
-              architectures.
-            </p>
+            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.name') }}</p>
+            <p class="font-headline font-bold text-on-surface text-lg leading-tight">{{ personal.name[$i18nLocale] }}</p>
+            <p class="font-body text-on-surface-variant text-sm">{{ personal.name[$i18nLocale === 'th' ? 'en' : 'th'] }}</p>
+          </div>
+          <!-- Nickname -->
+          <div>
+            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.nickname') }}</p>
+            <p class="font-body text-on-surface text-sm">{{ personal.nickname[$i18nLocale] }} / {{ personal.nickname[$i18nLocale === 'th' ? 'en' : 'th'] }}</p>
+          </div>
+          <!-- Gender -->
+          <div>
+            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.gender') }}</p>
+            <p class="font-body text-on-surface text-sm">{{ $t('personal.gender') }}</p>
+          </div>
+          <!-- Age -->
+          <div>
+            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.age') }}</p>
+            <p class="font-body text-on-surface text-sm">{{ age }} {{ $t('personal.label.yearsOld') }}</p>
+          </div>
+          <!-- Location -->
+          <div>
+            <p class="font-label text-[10px] text-brand uppercase tracking-widest mb-1">{{ $t('personal.label.location') }}</p>
+            <p class="font-body text-on-surface text-sm leading-snug">{{ personal.location[$i18nLocale] }}</p>
           </div>
         </div>
-        <!-- Location/Contact Minimalist Card
-        <div
-          class="col-span-4 md:col-span-2 p-8 rounded-xl glass-panel flex justify-between items-center group"
-        >
-          <div class="space-y-1">
-            <span
-              class="font-label text-[10px] text-primary uppercase tracking-widest"
-              >Based in</span
-            >
-            <h4 class="font-headline text-2xl font-bold tracking-tight">
-              BANGKOK, THAILAND
+
+        <!-- ③ Open for Opportunities Card (col-span-1) -->
+        <div class="col-span-4 md:col-span-1 p-7 rounded-xl bg-surface-container-high flex flex-col justify-between group hover:bg-surface-bright transition-all overflow-hidden relative">
+          <div class="relative z-10 space-y-4">
+            <!-- Pulse indicator -->
+            <div class="flex items-center gap-3">
+              <div class="relative">
+                <div class="w-3 h-3 bg-brand rounded-full animate-pulse shadow-[0_0_10px_#81ecff]"></div>
+                <div class="absolute inset-0 w-3 h-3 bg-brand rounded-full opacity-40 animate-ping"></div>
+              </div>
+              <span class="font-label text-xs text-brand uppercase tracking-widest">{{ $t('personal.availability') }}</span>
+            </div>
+
+            <h4 class="font-headline text-xl font-bold text-on-surface leading-snug">
+              {{ $t('personal.openFor') }}
             </h4>
+            <p class="text-on-surface-variant text-sm">{{ $t('personal.openForDetail') }}</p>
           </div>
-          <div class="flex gap-4">
-            <a
-              class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-xl"
-                >alternate_email</span
-              >
-            </a>
-            <a
-              class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-xl">share</span>
-            </a>
+
+          <!-- CTA button -->
+          <button
+            @click="scrollToContact"
+            class="mt-6 relative z-10 w-full py-3 rounded-lg bg-brand/10 border border-brand/30 hover:bg-brand/20 text-brand font-label text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2"
+          >
+            <span class="material-symbols-outlined text-sm">alternate_email</span>
+            {{ $t('personal.contactBtn') }}
+          </button>
+
+          <!-- Decorative bg icon -->
+          <div class="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
+            <span class="material-symbols-outlined text-[10rem]">hub</span>
           </div>
-        </div> -->
+        </div>
+
       </div>
     </section>
   </div>
 </template>
-<script>
-import { CpuChipIcon } from '@heroicons/vue/24/outline'
-</script>
-<style>
-.material-symbols-outlined {
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 300,
-    "GRAD" 0,
-    "opsz" 24;
+
+<script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import TechTag from '../TechTag.vue'
+import { personalData as personal } from '../../data/personal/index.js'
+
+const { locale } = useI18n()
+const $i18nLocale = computed(() => locale.value)
+
+// Compute age from birth month/year
+const age = computed(() => {
+  const now = new Date()
+  let a = now.getFullYear() - personal.birthYear
+  if (now.getMonth() + 1 < personal.birthMonth) a--
+  return a
+})
+
+// Story highlight chunks for current locale
+const storyParts = computed(() => personal.story[locale.value] || personal.story.en)
+
+const scrollToContact = () => {
+  const el = document.querySelector('#contact')
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 80
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
 }
+</script>
+
+<style>
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(160px, auto);
   gap: 1.5rem;
 }
-.glass-panel {
-  background: rgba(25, 37, 64, 0.6);
-  backdrop-filter: blur(20px);
-}
-.grid-bg {
-  background-image:
-    linear-gradient(to right, #141f38 1px, transparent 1px),
-    linear-gradient(to bottom, #141f38 1px, transparent 1px);
-  background-size: 4rem 4rem;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
 }
 </style>
-การเปลี่ยนโครงสร้างเชิงตรรกะให้กลายเป็นเครื่องมือที่ใช้งานได้จริง
-เป้าหมายของผมคือการเชื่อมโยงช่องว่างระหว่างเทคโนโลยีขั้นสูงกับวิถีชีวิตประจำวัน
-สนใจ การวางโครงสร้างระบบ (Systems Architecture)
-การสร้างโซลูชันที่รองรับการขยายตัวได้ (Scalable Solutions)

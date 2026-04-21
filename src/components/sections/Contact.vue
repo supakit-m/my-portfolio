@@ -7,9 +7,9 @@
       </div>
     </header>
     <div class="lg:col-span-8 space-y-8 w-full">
-      <div class="bg-surface-container-high rounded-xl pb-12 pt-24 md:px-16 border border-primary/10 shadow-2xl relative overflow-hidden group">
+      <div class="bg-surface-container-high rounded-xl pb-12 pt-10 px-6 md:px-16 border border-primary/10 shadow-2xl relative overflow-hidden group">
         <!-- Availability badge -->
-        <div class="absolute top-0 right-0 p-6 pointer-events-none flex flex-wrap items-center gap-5 w-80 mb-8">
+        <div class="relative top-0 right-0 p-6 pointer-events-none flex flex-wrap items-center gap-5 w-80 mb-8">
           <div class="relative">
             <div class="w-3 h-3 bg-primary rounded-full animate-pulse box-section-shadow brightness-200"></div>
             <div class="absolute top-0 left-0 w-3 h-3 bg-primary rounded-full brightness-150"></div>

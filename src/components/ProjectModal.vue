@@ -97,15 +97,22 @@
 
             <!-- Tags breakdown -->
             <div class="space-y-3">
-              <div v-for="(group, key) in tagGroups" :key="key" class="flex items-start gap-3">
-                <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest w-20 shrink-0 pt-0.5">{{ $t(`project.tags.${key}`) }}</span>
+              <div class="flex items-start gap-3">
+                <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest w-20 shrink-0 pt-0.5">{{ $t('project.tags.category') }}</span>
                 <div class="flex flex-wrap gap-1.5">
-                  <span
-                    v-for="tag in group"
-                    :key="tag"
-                    class="px-2 py-0.5 rounded font-label text-[10px] uppercase tracking-wide"
-                    :class="getTagColor(key, tag)"
-                  >{{ tag }}</span>
+                  <TechTag v-for="t in project.tags.category" :key="t" :label="t" type="category" size="sm" />
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest w-20 shrink-0 pt-0.5">{{ $t('project.tags.languages') }}</span>
+                <div class="flex flex-wrap gap-1.5">
+                  <TechTag v-for="t in project.tags.languages" :key="t" :label="t" type="language" size="sm" />
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest w-20 shrink-0 pt-0.5">{{ $t('project.tags.tech') }}</span>
+                <div class="flex flex-wrap gap-1.5">
+                  <TechTag v-for="t in project.tags.tech" :key="t" :label="t" type="tech" size="sm" />
                 </div>
               </div>
             </div>
@@ -132,6 +139,7 @@
 
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import TechTag from './TechTag.vue'
 import { useI18n } from 'vue-i18n'
 import { marked } from 'marked'
 

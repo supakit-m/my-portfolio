@@ -50,6 +50,7 @@
 
         <!-- Resume Button -->
         <button
+          @click="openResume"
           class="bg-primary-container text-on-primary-container font-label font-bold cursor-pointer w-30 px-4 md:px-6 py-2 rounded-full text-[10px] md:text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all"
         >
           {{ $t('nav.resume') }}
@@ -166,6 +167,10 @@ const handleNavigation = (id) => {
       window.scrollTo({ top, behavior: 'smooth' })
     }
   }, 300)
+}
+
+const openResume = () => {
+  window.open(' /my-portfolio/resume/Supakit_mai-ngam_CV_resume.pdf', '_blank')
 }
 
 onMounted(() => { getActiveSection(); window.addEventListener('scroll', onScroll, { passive: true }) })

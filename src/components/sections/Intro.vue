@@ -26,7 +26,7 @@
           {{ $t('intro.viewProjects') }}
         </button>
         <a
-          href="/path-to-your-resume.pdf"
+          href="/my-portfolio/resume/Supakit_mai-ngam_CV_resume.pdf"
           target="_blank"
           class="w-full md:w-auto px-10 py-4 rounded-full border-2 border-outline-variant hover:bg-surface-bright text-on-surface font-label font-bold uppercase tracking-widest transition-all"
         >

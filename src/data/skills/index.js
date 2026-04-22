@@ -3,10 +3,10 @@
 
 export const skillsData = {
   languages: ['JavaScript', 'TypeScript', 'Python', 'PHP'],
-  frontend:  ['Vue.js', 'Vite', 'Tailwind CSS', 'Vue Router', 'i18n'],
+  frontend:  ['Vue.js', 'Vite', 'Tailwind CSS', 'i18n'],
   backend:   ['Node.js', 'NestJS', 'FastAPI', 'RESTful API', 'WebSocket'],
-  database:  ['MySQL', 'TypeORM'],
-  tools:     ['Git', 'Fork', 'Postman', 'MediaPipe', 'TensorFlow.js'],
+  database:  ['MySQL', 'PostgreSQL', 'TypeORM'],
+  tools:     ['Git', 'Fork', 'Docker', 'Postman', 'MediaPipe', 'TensorFlow.js'],
 }
 
 // ─── i18n messages ────────────────────────────────────────────────────────────

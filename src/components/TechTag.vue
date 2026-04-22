@@ -77,6 +77,7 @@ const techColors = {
   'Postman':        'tag-tech-postman',
   'Git':            'tag-tech-git',
   'Fork':           'tag-tech-git',
+  'Docker':         'tag-tech-docker',
   // Generic fallback
 }
 
@@ -141,6 +142,7 @@ const colorClass = computed(() => {
 .tag-tech-pinia       { background: oklch(40% 0.14 90  / 0.2); color: oklch(80% 0.14 90);  border: 1px solid oklch(65% 0.14 90  / 0.35); }
 .tag-tech-postman     { background: oklch(38% 0.14 40  / 0.2); color: oklch(80% 0.14 40);  border: 1px solid oklch(65% 0.14 40  / 0.35); }
 .tag-tech-git         { background: oklch(36% 0.12 30  / 0.2); color: oklch(78% 0.12 30);  border: 1px solid oklch(62% 0.12 30  / 0.35); }
+.tag-tech-docker    { background: oklch(38% 0.13 210 / 0.2); color: oklch(80% 0.13 210); border: 1px solid oklch(62% 0.13 210 / 0.35); }
 
 /* ── Fallback ── */
 .tag-fallback { background: oklch(25% 0.03 265 / 0.4); color: oklch(72% 0.04 265); border: 1px solid oklch(45% 0.04 265 / 0.3); }
